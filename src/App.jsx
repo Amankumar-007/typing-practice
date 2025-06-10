@@ -3,6 +3,7 @@ import AnimatedWord from './components/AnimatedWord';
 import Timer from './components/Timer';
 import TypingInput from './components/TypingInput';
 import ResetButton from './components/ResetButton';
+import WordGrid from './components/WordGrid';
 
 const WORDS = [
   'innovation', 'keyboard', 'velocity', 'minimal', 'practice', 'animation', 'reactive', 'framer', 'motion', 'modern', 'awesome', 'challenge', 'performance', 'design', 'interface', 'component', 'dynamic', 'random', 'reset', 'timer',
@@ -99,7 +100,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-50 to-blue-100 px-4">
-      <div className="w-full max-w-xl bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center">
+      <div className="w-[80vw] h-[50vh] max-w-5xl bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transition-all duration-300">
         <div className="flex flex-col md:flex-row gap-4 w-full mb-4 justify-between">
           <div>
             <label className="font-semibold text-gray-600 mr-2">Time:</label>
@@ -119,13 +120,7 @@ const App = () => {
           </div>
         </div>
         <Timer timer={timer} isFinished={isFinished} />
-        <div className="flex flex-col items-center w-full mb-4">
-          <div className="flex flex-row gap-4 w-full justify-center">
-            {words.map((w, idx) => (
-              <AnimatedWord key={idx} word={w} input={idx === 0 ? input : ''} />
-            ))}
-          </div>
-        </div>
+        <WordGrid words={words} input={input} />
         <TypingInput
           ref={inputRef}
           value={input}
@@ -134,7 +129,7 @@ const App = () => {
           isFinished={isFinished}
         />
         <ResetButton onClick={handleReset} isFinished={isFinished} />
-        <div className="mt-6 w-full flex flex-col items-center">
+        <div className="mt-4 w-full flex flex-col items-center">
           <div className="text-lg font-semibold text-gray-700 mb-2">Score: <span className="text-blue-500">{score}</span></div>
           {isFinished && (
             <div className="text-xl font-bold text-green-600 mb-2">WPM: {wpm}</div>
