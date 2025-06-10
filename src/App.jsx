@@ -120,7 +120,13 @@ const App = () => {
           </div>
         </div>
         <Timer timer={timer} isFinished={isFinished} />
-        <WordGrid words={words} input={input} />
+        <div className="flex flex-col items-center w-full mb-4">
+          <div className="w-full flex justify-center">
+            <div className="w-full max-w-4xl min-h-[120px] bg-gray-100 border-2 border-gray-200 rounded-xl shadow-inner px-6 py-6 overflow-x-auto whitespace-pre-wrap flex flex-wrap gap-x-4 gap-y-2 items-center transition-all duration-300">
+              <WordGrid words={words} input={input} />
+            </div>
+          </div>
+        </div>
         <TypingInput
           ref={inputRef}
           value={input}
