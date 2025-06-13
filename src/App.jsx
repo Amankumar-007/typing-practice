@@ -703,7 +703,7 @@ useEffect(() => {
       <footer className={`w-full py-4 text-center ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
         <div className="flex justify-center gap-4 mb-2">
           <motion.a 
-            href="https://github.com/yourusername" 
+            href="https://github.com/Amankumar-007" 
             target="_blank" 
             rel="noopener noreferrer"
             whileHover={{ y: -2 }}
@@ -712,7 +712,7 @@ useEffect(() => {
             <FiGithub size={20} />
           </motion.a>
           <motion.a 
-            href="https://linkedin.com/in/yourusername" 
+            href="https://www.linkedin.com/in/amankumarweb/" 
             target="_blank" 
             rel="noopener noreferrer"
             whileHover={{ y: -2 }}

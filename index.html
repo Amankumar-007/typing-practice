@@ -2,12 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <meta name="description" content="TypeRiser - Test and improve your typing speed with this interactive typing test application. Measure your WPM, accuracy, and track your progress.">
+    <meta name="keywords" content="typing test, typing speed, WPM test, keyboard practice, typing practice">
+    <meta name="author" content="Aman Kumar">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://typeriser.app/">
+    <meta property="og:title" content="TypeRiser - Typing Speed Test">
+    <meta property="og:description" content="Test and improve your typing speed with this interactive typing test application.">
+    <meta property="og:image" content="https://typeriser.app/preview.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://typeriser.app/">
+    <meta property="twitter:title" content="TypeRiser - Typing Speed Test">
+    <meta property="twitter:description" content="Test and improve your typing speed with this interactive typing test application.">
+    <meta property="twitter:image" content="https://typeriser.app/preview.jpg">
+    
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preload" href="/src/main.jsx" as="script">
+    <link rel="preconnect" href="https://random-word-api.vercel.app">
+    
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "TypeRiser",
+      "description": "Interactive typing speed test application",
+      "url": "https://typeriser.app",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "Aman Kumar"
+      }
+    }
+    </script>
+    
+    <title>TypeRiser - Typing Speed Test | Measure Your WPM & Accuracy</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.jsx" defer></script>
   </body>
 </html>
